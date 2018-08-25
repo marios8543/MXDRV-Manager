@@ -17,7 +17,7 @@ def search(self):
 
 def rescan(self):
     c = app.scan_library()
-    gui.showinfo("Scan complete","Indexed {} songs in {}".format(c['count'],str(c['time']).split('.')[0]))
+    gui.infoBox("Scan complete","Indexed {} songs in {}".format(c['count'],str(c['time']).split('.')[0]))
     return
 
 gui.addButton("Rescan Library",rescan,row=0,column=0)
