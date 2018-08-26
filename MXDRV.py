@@ -23,6 +23,8 @@ class MXDRV:
 		if len(self.folders)<1:
 			print('No mdx folders specified')
 			exit()
+		self.dbfile = dbfile
+		self.cfg = cfg
 		self.conn = sqlite3.connect(dbfile)
 		self.db = self.conn.cursor()
 		self.db.execute("""
